@@ -1,0 +1,52 @@
+//    “A journey of a thousand miles begins with a single step”  -Lao Tzu
+
+#include<bits/stdc++.h>
+using namespace std;
+#define sci(n) scanf("%d",&n);
+#define scf(n) scanf("%f",&n);
+#define scc(n) scanf("%c",&n);
+#define pf(n) printf("%f",n);
+#define pi(n) printf("%d",n);
+#define pc(n) printf("%c",n);
+#define mkp make_pair
+typedef pair<int,int> pii;
+typedef long long ll;
+typedef vector<int> vi;
+typedef vector<ll> vll;
+typedef vector<vi> vvi;
+typedef priority_queue<int> pqi;
+typedef priority_queue<int, vi, greater<int>> rpqi;
+typedef map<int,int> mpi;
+#define rep(i,s,e) for(int i=(s);i<int(e);i++)
+#define per(i,s,e) for(int i=(s-1);i>=e;i--)
+#define all(a) a.begin(),a.end()
+#define fsort(a) sort(a.begin(),a.end())
+#define ssort(a) sort(all(a),sortbysec);
+#define ub(a,b)  upper_bound(all(a),b)
+#define lb(a,b)  lower_bound(all(a),b)
+#define bs(a,b)  binary_search(all(a),b)
+#define pb(a) push_back(a)
+#define sz(a) a.size()
+#define vread(a) for(auto &x:a)cin>>x
+#define nl cout<<endl;
+
+void solve()
+{
+    int a,b;
+    cin>>a>>b;
+    // cout<<(1>>2);
+    int sum=0,pos=0;
+    while(b>0)
+    {
+        if(1&b)sum+=(a<<pos);
+        pos++;
+        b=b>>1;
+    }
+    cout<<sum;
+}
+int main()
+{
+    int t;sci(t);
+    while(t--){solve();nl;}
+    return 0;
+}
